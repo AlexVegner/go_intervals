@@ -1,0 +1,21 @@
+# The name of this package.
+#glidepackage: app
+package: app
+#ignore:
+#  - app # ignore 'app' package
+#excludeDirs:
+#  - app
+
+# External dependencies.
+import:
+  # Minimal definition
+  # This will use "go get [-u]" to fetch and update the package, and it will
+  # attempt to keep the release at the tip of master. It does this by looking
+  # for telltale signs that this is a git, bzr, or hg repo, and then acting
+  # accordingly.
+- package: github.com/gin-gonic/gin
+  version: ^1.4.0
+
+- package: github.com/gin-contrib/sse
+
+- package: github.com/google/uuid
